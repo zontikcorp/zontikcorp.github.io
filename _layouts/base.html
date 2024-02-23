@@ -3,29 +3,43 @@ layout: compress
 ---
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-    {% if site.analytics-google %}
-    {% include analytics-google.html %}
-    {% endif %}
-    
+  <head>    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description }}">
     <meta name="author" content="{{ site.name }}">
-    <meta property="og:image" content="{{ site.url }}/{{ site.picture }}">
-    <meta property="og:type" content="profile">
     
-    {% seo %}
+    {%- seo -%}
     {% include favicon.html %}
         
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml"/>
+    <link href="//fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.11.1/css/flag-icons.min.css"
+      integrity="sha512-ZQKxM5Z+PmOVa/VmISvHcqlUgzPejY92+I+sur69qiB7Vd+dAaDNMwy7AnRr6HcFbYY4so1FFPBgugE5s2jm7Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="assets/css/bootswatch-v3.2.0.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
   </head>
+  
   <body>
-    <div class="content">
-      {{ content }}
-    </div>
+    {{ content }}
   </body>
+  
 </html>
